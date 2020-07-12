@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'boiling-river-15270.herokuapp.com',
+    'by-dragonite.herokuapp.com',
     '127.0.0.1',
 ]
 
