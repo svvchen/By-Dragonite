@@ -1,0 +1,40 @@
+<!doctype html>
+{% load static %}
+<html>
+    <head>
+      <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+      <link rel="shortcut icon" href="{% static 'core/img/dragonite_favicon.png' %}" />
+    </head>
+    <body>
+        <div>
+            <div>
+                <h2>&#9729; By Dragonite &#9729;</h2>
+                <h3>
+                  <a href="{% url 'blog:blog_archive' %}" class="archives_link">Archive</a> |
+                  <a href="{% url 'signup' %}" class="archives_link">Subscribe</a> |
+                  <a href="{% url 'blog:blog_archive' %}" class="archives_link">About</a>
+                </h3>
+            </div>
+            <div>
+                {% if email %}
+                <p>{{ email }} has been {{ action }}.</p>
+                {% endif %}
+            </div>
+          {% if form %}
+            <div class="form_special">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form.email.label|linebreaks }}
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                      {{ form.email.errors }}
+                    {% else %}
+                      <br>
+                    {% endif %}
+                    <button type="submit" class="btn btn-success">And subscribe!</button>
+                </form>
+            </div>
+          {% endif %}
+        </div>
+    </body>
+</html>
