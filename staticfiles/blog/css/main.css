@@ -1,0 +1,105 @@
+.archives {
+  text-align: center;
+  margin-top:30px;
+}
+
+.archives_link:hover {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 25px;
+  transition: all 0.5s;
+}
+
+.archives_link {
+  color: #FFD700;
+  font-size: 15px;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+
+.errorlist {
+    list-style: none;
+    color: red;
+    font-size: 8px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+ul {
+  padding-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 12.5px;
+}
+
+form {
+  text-align: center;
+  /* padding: 15px; */
+}
+
+html {
+  background: url("../img/dragonite.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: PokemonGb-RAeo;
+  src: url(AtariClassicChunky-PxXP.ttf);
+}
+
+* {
+  font-family: PokemonGb-RAeo;
+}
+
+h1, h2 {
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  color: #FFD700;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  background: none;
+  color: black;
+
+}
+
+button:hover {
+  padding: 20px;
+  border: none;
+  background: none;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+.form-control {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border:none;
+    outline-width: 0;
+    font-size: 12.5px;
+    font-color: black;
+    text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
