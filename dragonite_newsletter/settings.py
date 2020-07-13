@@ -24,11 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
 DEBUG = False
-=======
-DEBUG = True
->>>>>>> 8cd5acb1a23b5be1b725c1fce017269773009122
 
 ALLOWED_HOSTS = [
     'by-dragonite.herokuapp.com',
