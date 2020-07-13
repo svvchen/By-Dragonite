@@ -15,6 +15,9 @@
           <a href="{% url 'blog:blog_archive' %}" class="archives_link">About</a>
         </h3>
     </div>
-      <p>hi</p>
+    {% for post in posts %}
+      <h3 class="spaced_paragraph"><a href="{% url 'blog:blog_detail' post.pk%}" class="post_link">{{ post.title }}</a></h3>
+      <p>{{ post.created_on.date }}</p>
+    {% endfor %}
     </body>
 </html>
