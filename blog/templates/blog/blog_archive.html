@@ -1,0 +1,23 @@
+<!doctype html>
+{% load static %}
+<html>
+    <head>
+      <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+      <link rel="shortcut icon" href="{% static 'img/dragonite_favicon.png' %}" />
+      <title>Dragonite | Archives</title>
+    </head>
+    <body>
+    <div>
+        <h2>&#9729; By Dragonite &#9729;</h2>
+        <h3>
+          <a href="{% url 'blog:blog_archive' %}" class="archives_link">Archive</a> |
+          <a href="{% url 'signup' %}" class="archives_link">Subscribe</a> |
+          <a href="{% url 'blog:blog_archive' %}" class="archives_link">About</a>
+        </h3>
+    </div>
+    {% for post in posts %}
+      <h3 class="spaced_paragraph"><a href="{% url 'blog:blog_detail' post.pk%}" class="post_link">{{ post.title }}</a></h3>
+      <p>{{ post.created_on.date }}</p>
+    {% endfor %}
+    </body>
+</html>
