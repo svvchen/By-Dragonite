@@ -45,7 +45,7 @@ def confirm(request):
     else:
         return render(request, 'index.html', {'email': sub.email, 'action': 'denied'})
 
-# to do -- 
+# to do --
 def delete(request):
     sub = Subscriber.objects.get(email=request.GET['email'])
     if sub.conf_num == request.GET['conf_num']:
@@ -53,3 +53,6 @@ def delete(request):
         return render(request, 'index.html',  {'email': sub.email, 'action': 'unsubscribed'})
     else:
         return render(request, 'index.html', {'email': sub.email, 'action': 'denied'})
+
+def about(request):
+    return render(request, "about.html")

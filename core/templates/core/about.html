@@ -4,7 +4,7 @@
     <head>
       <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
       <link rel="shortcut icon" href="{% static 'img/dragonite_favicon.png' %}" />
-      <title>Dragonite | Archives</title>
+      <title>Dragonite | About</title>
     </head>
     <body>
     <div>
@@ -15,9 +15,8 @@
           <a href="{% url 'about' %}" class="archives_link">About</a>
         </h3>
     </div>
-    {% for post in posts %}
-      <h3 class="spaced_paragraph"><a href="{% url 'blog:blog_detail' post.pk%}" class="post_link">{{ post.title }}</a></h3>
-      <p>{{ post.created_on.date }}</p>
-    {% endfor %}
+    <div class="about_blurb">
+      <p>By Dragonite is my personal blog/newsletter site. I've always wanted a place to store links, readings, and fun snippets to re-discover later. With a couple years of consistent posting, I want to return to this site, and re-discover past posts. If I do it right, it'll have me feeling like an adult playing Pokemon again.</p>
+    </div>
     </body>
 </html>
